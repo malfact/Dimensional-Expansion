@@ -4,6 +4,5 @@
 	<classpathentry kind="src" path="src/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/forge-1.7.10-10.13.4.1614-1.7.10-src"/>
-	<classpathentry kind="lib" path="C:/Users/Malfact/Desktop/Minecraft Modding/1.7.10/CoFHCore-[1.7.10]3.1.4-329.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

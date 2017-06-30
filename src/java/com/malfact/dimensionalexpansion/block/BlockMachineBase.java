@@ -22,11 +22,6 @@ public class BlockMachineBase extends Block{
         //his.isBlockContainer = true;
 	}
 
-	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metaData, float sideX, float sideY, float sideZ) {
-		System.out.println("OLIVE JUICE");
-		return true;
-	}
 	/*@Override
 	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
 		// TODO Auto-generated method stub
