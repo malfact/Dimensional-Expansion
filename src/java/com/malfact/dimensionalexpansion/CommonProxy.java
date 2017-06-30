@@ -1,7 +1,6 @@
 package com.malfact.dimensionalexpansion;
 
 import com.malfact.dimensionalexpansion.block.DimExpBlocks;
-import com.malfact.dimensionalexpansion.tileentity.DimExpTileEntities;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
