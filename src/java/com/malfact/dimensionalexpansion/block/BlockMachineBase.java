@@ -2,13 +2,15 @@ package com.malfact.dimensionalexpansion.block;
 
 import com.malfact.dimensionalexpansion.Main;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockMachineBase extends BlockContainer{
+public class BlockMachineBase extends Block{
 
 	protected BlockMachineBase(String unlocalizedName, Material material) {
 		super(material);
@@ -19,13 +21,19 @@ public class BlockMachineBase extends BlockContainer{
         this.setResistance(2000.0F);
         this.setHarvestLevel("pickaxe", 3);
         this.setStepSound(soundTypeMetal);
-        this.isBlockContainer = true;
+        //his.isBlockContainer = true;
 	}
 
 	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metaData, float sideX, float sideY, float sideZ) {
+		System.out.println("OLIVE JUICE");
+		return true;
+	}
+	/*@Override
 	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	*/
 
 }

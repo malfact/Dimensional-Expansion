@@ -10,12 +10,12 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent e){
-		//Test Commit ;)
+		
 	}
 	
 	public void init(FMLInitializationEvent e){
 		DimExpBlocks.init();
-		DimExpTileEntities.init();
+		//DimExpTileEntities.init();
 	}
 	
 	public void postInit(FMLPostInitializationEvent e){

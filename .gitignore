@@ -1,1 +1,7 @@
 /bin/
+/config/
+/crash-reports/
+/logs/
+/mods/
+/resourcepacks/
+/saves/
