@@ -5,3 +5,8 @@
 /mods/
 /resourcepacks/
 /saves/
+/.classpath
+/.gitignore
+/.project
+/options.txt
+/usernamecache.json
