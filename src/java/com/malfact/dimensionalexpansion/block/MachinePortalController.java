@@ -1,9 +1,12 @@
 package com.malfact.dimensionalexpansion.block;
 
+import cofh.lib.util.helpers.BlockHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -21,7 +24,7 @@ public class MachinePortalController extends BlockMachineBase{
 		this.icons[0] = reg.registerIcon(this.textureName + "_bottom");
 		this.icons[1] = reg.registerIcon(this.textureName + "_top");
 		this.icons[2] = reg.registerIcon(this.textureName + "_side");
-		this.icons[3] = reg.registerIcon(this.textureName + "_side");
+		this.icons[3] = reg.registerIcon(this.textureName + "_front");
 		this.icons[4] = reg.registerIcon(this.textureName + "_side");
 		this.icons[5] = reg.registerIcon(this.textureName + "_side");
 	}
@@ -32,8 +35,14 @@ public class MachinePortalController extends BlockMachineBase{
 	}
 	
 	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metaData, float sideX, float sideY, float sideZ) {
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemStack) {
+		if (entity == null)
+			return;
 		
+	} 
+	
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metaData, float sideX, float sideY, float sideZ) {
 		findSecondaryEmitters(world, x, y, z, player);
 		return true;
 	}
@@ -45,6 +54,7 @@ public class MachinePortalController extends BlockMachineBase{
 				return;
 			}
 		}
+		
 		player.addChatComponentMessage(new ChatComponentText("Portal Opened"));
 		world.setBlock(x, y+1, z, Block.getBlockFromName("cobblestone"));
 		world.setBlock(x, y+2, z, Block.getBlockFromName("cobblestone"));

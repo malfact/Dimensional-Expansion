@@ -19,7 +19,7 @@ public class BlockMachineBase extends Block{
         this.setResistance(2000.0F);
         this.setHarvestLevel("pickaxe", 3);
         this.setStepSound(soundTypeMetal);
-        //his.isBlockContainer = true;
+        //this.isBlockContainer = true;
 	}
 
 	/*@Override
